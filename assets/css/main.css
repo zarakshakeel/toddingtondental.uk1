@@ -854,8 +854,8 @@ section,
   background-position: center;
   background-repeat: no-repeat;
   display: flex;
-  justify-content: center;
-  align-items: flex-end;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 .hero .container {
@@ -980,6 +980,37 @@ section,
 .hero .carousel-indicators li.active {
   opacity: 1;
   background: var(--accent-color);
+}
+
+.hero .hero-box {
+  background: color-mix(in srgb, var(--surface-color), transparent 8%);
+  position: relative;
+  z-index: 3;
+  width: min(420px, calc(100% - 40px));
+  min-height: 320px;
+  margin: 0 0 0 80px;
+  padding: 36px 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: left;
+  border-left: 4px solid var(--accent-color);
+  border-top: 0;
+  border-radius: 18px;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.18);
+}
+
+.hero .hero-box h2 {
+  margin-bottom: 16px;
+}
+
+.hero .hero-box p {
+  margin-bottom: 20px;
+}
+
+.hero .hero-box .btn-get-started {
+  margin: 0;
 }
 
 /*--------------------------------------------------------------
@@ -1241,9 +1272,13 @@ section,
 --------------------------------------------------------------*/
 .services .service-item {
   text-align: center;
-  padding: 20px;
+  padding: 1px;
   transition: all ease-in-out 0.3s;
   height: 100%;
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .services .service-item .icon {
@@ -1258,18 +1293,24 @@ section,
   justify-content: center;
   margin-bottom: 20px;
   transition: 0.3s;
-  font-size: 32px;
+  font-size: 35px;
   transition: ease-in-out 0.3s;
   box-shadow: 0px 0 25px rgba(0, 0, 0, 0.1);
 }
 
 .services .service-item h3 {
-  font-weight: 700;
+ font-weight: 600;
   margin-bottom: 15px;
   padding-bottom: 15px;
   font-size: 22px;
   transition: 0.3s;
   position: relative;
+  width: 100%;
+  min-height: 68px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 .services .service-item h3:after {
@@ -1284,9 +1325,11 @@ section,
 }
 
 .services .service-item p {
-  line-height: 24px;
+   line-height: 24px;
   font-size: 14px;
   margin-bottom: 0;
+  width: 100%;
+  min-height: 72px;
 }
 
 .services .service-item:hover .icon {
@@ -1638,8 +1681,8 @@ section,
   font-weight: 400;
   margin: -20px -20px 20px -20px;
   padding: 20px 15px;
-  font-size: 16px;
-  font-weight: 600;
+  font-size: 20px;
+  font-weight: 700;
   color: color-mix(in srgb, var(--default-color), transparent 20%);
   background: color-mix(in srgb, var(--default-color), transparent 95%);
 }
@@ -1665,7 +1708,7 @@ section,
 .pricing .pricing-item ul {
   padding: 15px 0;
   list-style: none;
-  text-align: center;
+  text-align: start;
   line-height: 20px;
   font-size: 14px;
 }
