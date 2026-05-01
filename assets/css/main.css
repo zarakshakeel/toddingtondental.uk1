@@ -1925,5 +1925,12 @@ section,
 }
 
 /*--------------------------------------------------------------
-# Starter Section Section
+# appointment Section
 --------------------------------------------------------------*/
+.row-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid #ccc; /* ← this creates the straight line */
+  color: color-mix(in srgb, var(--default-color), transparent 30%);
+}
